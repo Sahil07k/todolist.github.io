@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Montserrat:wght@400;600&family=Open+Sans&family=Ubuntu:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/5d8274fbc1.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>ToDo List</title>
+  </head>
+  <body
+    background="./images/gr.jpg"
+    style="background-repeat: no-repeat; background-size: cover"
+  >
+    <div class="main blur">
+      <div class="header">
+        <h1 class="logo">Lunatic !</h1>
+        <button
+          id="clr"
+          type="submit"
+          class="btn btnclear"
+          onclick="clearAll(this)"
+        >
+          Clear All
+        </button>
+      </div>
+      <div class="input-container">
+        <label class="label" name="todo">Todo</label>
+        <input
+          id="inp"
+          class="input inp-inp"
+          type="text"
+          placeholder="Add Task"
+          autocomplete="off"
+        />
+        <label class="label" name="Importance"> Preference</label>
+        <input
+          id="imp"
+          class="input inp-inp"
+          type="text"
+          placeholder="Importance"
+          list="Imp"
+        />
+        <datalist id="Imp" autcomplete="off">
+          <option data-value="1">Low</option>
+          <option data-value="2">Medium</option>
+          <option data-value="3">High</option>
+        </datalist>
+        <input type="hidden" id="index" />
+      </div>
+      <div class="addbtn">
+        <button id="sub" type="submit" class="btn btn-Add btn-streached">
+          Add
+        </button>
+      </div>
+      <!--All bottom buttons-->
+      <div class="filter-Container">
+        <button
+          id="All"
+          type="submit"
+          class="btn btn-All filter-btn button-primary"
+          data-type="All"
+        >
+          All
+        </button>
+        <button
+          id="comp"
+          type="submit"
+          class="btn btn-completed filter-btn button-primary"
+          data-type="completed"
+        >
+          Completed
+        </button>
+        <button
+          id="uncomp"
+          type="submit"
+          class="btn btn-uncompleted filter-btn button-primary"
+          data-type="uncompleted"
+        >
+          Uncompleted
+        </button>
+      </div>
+
+      <!--List of our todo-->
+      <ul id="list" class="list-group">
+        <!-- <li class="list-item">
+            <div class="task-container">
+              <span class="task">asdasd</span>
+              <span class="Importance">asdasd</span>
+            </div>
+            <span class="icons icon-box">
+              <i class="fas fa-check"></i>
+              <i class="fas fa-trash-alt"></i
+            ></span> 
+          </li>-->
+      </ul>
+    </div>
+  </body>
+  <script src="New.js"></script>
+</html>

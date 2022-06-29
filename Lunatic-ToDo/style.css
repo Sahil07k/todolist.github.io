@@ -1,0 +1,409 @@
+:root {
+  --color-heading: #f8f8ff;
+  --color-button: #eba522b4;
+  --color-header: #101028;
+  --color-secondary: grey;
+  --color-placeholder: #3c3e4d;
+  --color-secondarytext: #bdbfcc;
+  --color-body: #000000;
+  --color-logo: #86851f;
+}
+.logo{
+  text-shadow: 5px 5px 10px red;;
+ 
+}
+/* .blur{
+  background-size:cover;
+-webkit-filter: blur(4px);
+-moz-filter: blur(4px);
+-ms-filter: blur(4px);
+-o-filter: blur(4px);
+filter: blur(4px);
+} */
+
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Ubuntu", sans-serif;
+  background-color: var(--color-header);
+}
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+
+/*main div of the page*/
+.main {
+  height: auto;
+  margin: 1rem 1rem;
+}
+@media screen and (min-width: 460px) {
+  .main {
+    margin: 2rem 10vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .main {
+    margin: 2rem 15vw;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .main {
+    margin: 2rem 25vw;
+  }
+}
+/*----------------------------------------------------------------------------------------------*/
+/* main header of our html*/
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+/*----------------------------------------------------------------------------------------------*/
+/*heading of our html*/
+h1 {
+  color: var(--color-heading);
+  font-size: 3.8rem;
+  font-weight: 700;
+}
+@media screen and (min-width: 460px) {
+  h1 {
+    font-size: 4.5rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 4.8rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  h1 {
+    font-size: 5rem;
+  }
+}
+/*heading end*/
+/*----------------------------------------------------------------------------------------------*/
+/*it will group every element of the html*/
+/*buttons*/
+/*-----------------------------setting for small screen-------------------------------*/
+.btn {
+  font-family: "Ub untu", sans-serif;
+  background-color: var(--color-button);
+  border: 0;
+  outline: 0;
+  border-radius: 40px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  transition: 0.2s;
+  padding: 1rem 0rem;
+  font-size: 1rem;
+}
+.btn:hover {
+  background-color: #117552c2;
+}
+/*button clear*/
+.btnclear {
+  transition: 0.2s;
+  padding: 0% 2rem;
+  margin: 2.8rem 0%;
+}
+.btnclear:hover {
+  background-color: #117552c2;
+}
+/*----------------------------------------------------------------------------------------------*/
+/*button Add task*/
+.addbtn {
+  display: flex;
+  justify-content: center;
+}
+.btn-Add {
+  margin: 2rem 0;
+}
+.btn-streached {
+  padding: 1rem 0;
+  width: 100%;
+}
+/*-----------------------------setting for medium screen-------------------------------*/
+@media screen and (min-width: 460px) {
+  .btn {
+    font-size: 1.1rem;
+  }
+  .btnclear {
+    margin: 3.2rem 2rem;
+    padding: 1rem 2rem;
+  }
+  .btn-Add {
+    padding: 1.5rem 0;
+  }
+}
+/*-----------------------------setting for large screen-------------------------------*/
+@media screen and (min-width: 768px) {
+  .btn {
+    font-size: 1.3rem;
+  }
+  .btnclear {
+    margin: 3.5rem 2rem;
+    padding: 0.5rem 4rem;
+  }
+  .btn-Add {
+    margin: 2rem 0;
+    padding: 1.5rem 0;
+  }
+}
+/*-----------------------------setting for extra screen-------------------------------*/
+@media screen and (min-width: 1024px) {
+  .btn {
+    font-size: 1.5rem;
+  }
+  .btnclear {
+    margin: 3.5rem 2rem;
+  }
+  .btn-Add {
+    padding: 1.5rem 0;
+  }
+}
+/*----------------------------------------------------------------------------------------------*/
+/*btbtns or bottom buttons*/
+.filter-Container {
+  margin: 2rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.filter-btn {
+  padding: 1.5rem 0rem;
+  width: 100%;
+}
+
+@media screen and (min-width: 460px) {
+  .filter-Container {
+    flex-wrap: nowrap;
+    justify-content: space-around;
+  }
+  .btn-All {
+    width: 13vw;
+  }
+  .btn-completed {
+    width: 18vw;
+  }
+  .btn-uncompleted {
+    width: 20vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .filter-Container {
+    flex-wrap: nowrap;
+    justify-content: space-around;
+  }
+  .btn-All {
+    width: 8vw;
+  }
+  .btn-completed {
+    width: 12vw;
+  }
+  .btn-uncompleted {
+    width: 15vw;
+  }
+}
+
+/*button All used for showing all task*/
+.button-primary {
+  background-color: var(--color-button);
+  color: var(--color-body);
+}
+
+----------------------------------------------------------------------------------------*/
+/*container inputs*/
+.input-container {
+  display: flex;
+  padding: 0rem;
+  margin-top: 1.5rem;
+}
+/*input*/
+.input {
+  background-color: var(--color-placeholder);
+  color: var(--color-heading);
+  font-family: "Ubuntu", sans-serif;
+  border: 0;
+  outline: 0;
+  border-radius: 40px;
+  font-size: 1.3rem;
+  padding: 1rem 1rem;
+  width: 100%;
+  padding-left: 2rem;
+  margin: 1rem 0;
+}
+/*labels*/
+.label {
+  display: flex;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-heading);
+}
+/*placeholder*/
+::placeholder {
+  font-family: "Ubuntu", sans-serif;
+  color: var(--color-secondarytext);
+  font-size: 1.3rem;
+}
+@media screen and (min-width: 460px) {
+  .label {
+    font-size: 1.6rem;
+  }
+  ::placeholder {
+    font-size: 1.3rem;
+  }
+  .input {
+    font-size: 1.6rem;
+    width: 100%;
+    height: 3.5rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .label {
+    font-size: 2rem;
+  }
+  ::placeholder {
+    font-size: 1.5rem;
+  }
+  .input {
+    font-size: 1.8rem;
+    width: 100%;
+    height: 4.5rem;
+  }
+}
+
+/*----------------------------------------------------------------------------------------------*/
+/* list*/
+.list-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  padding: 0;
+}
+.list-item {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  color: var(--color-heading);
+  margin-bottom: 2rem;
+  padding: 2rem 2rem;
+  border-radius: 5px;
+  background-color: var(--color-placeholder);
+  transition: all 0.5s;
+  width: 100%;
+}
+.list-item:hover {
+  box-shadow: 2px 4px 1px 0 var(--color-button);
+  opacity: 0.7;
+}
+@media screen and (min-width: 768px) {
+  .list-item {
+    width: 100%;
+    height: 10rem;
+  }
+}
+@media screen and (min-width: 460px) {
+  .list-item {
+    width: 100%;
+    height: 10rem;
+  }
+}
+/*----------------------------------------------------------------------------------------------*/
+/* TODO Styling */
+.task-container {
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  border-left: 2px solid var(--color-button);
+}
+.task {
+  margin-top: 0.5rem;
+  font-size: 1.3rem;
+  padding-left: 2rem;
+}
+.Importance {
+  font-size: 1rem;
+  padding-left: 2rem;
+  margin-top: 0.5rem;
+}
+@media screen and (min-width: 460px) {
+  .task {
+    font-size: 1.6rem;
+  }
+  .Importance {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .task {
+    font-size: 1.7rem;
+  }
+  .Importance {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .task {
+    font-size: 2rem;
+  }
+  .Importance {
+    font-size: 1.5rem;
+  }
+}
+
+/*----------------------------------------------------------------------------------------------*/
+/*list icons*/
+.icons {
+  display: flex;
+  justify-content: right;
+  width: 10rem;
+  font-size: 1rem;
+  align-items: center;
+}
+@media screen and (min-width: 460px) {
+  .icons {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .icons {
+    font-size: 1.7rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .icons {
+    font-size: 2rem;
+  }
+}
+.fas {
+  color: var(--color-body);
+  background-color: var(--color-button);
+  border-radius: 100px;
+  transition: 0.2s;
+}
+.fa-trash-alt {
+  padding: 1rem;
+}
+.fa-check {
+  padding: 1rem;
+  margin-right: 1rem;
+}
+.fill {
+  background-color: green;
+}
+
+.fa-trash-alt:hover {
+  background-color: #079664;
+}
+.fa-check:hover {
+  background-color: #079664;
+}
+.lined {
+  text-decoration: line-through;
+  color: var(--color-heading);
+}
